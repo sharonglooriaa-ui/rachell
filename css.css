@@ -1082,133 +1082,67 @@ body {
 
 }
 
-/* Cobaan */
-/* Media Query untuk Layar HP / Mobile */
-@media screen and (max-width: 768px) {
-  
-  /* 1. Atur container agar memiliki padding dan tidak menempel di tepi layar */
-  body, container, .main-content {
-    padding: 10px;
-    width: 100% !important;
-    overflow-x: hidden; /* Mencegah layar bisa digeser ke kanan/kiri */
-  }
-
-  /* 2. Ubah layout 2 kolom (seperti Form & Kontak) menjadi 1 kolom bersusun */
-  .contact-container, .grid, .flex-row {
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-
-  /* 3. Perkecil ukuran font judul agar tidak jebol */
-  h1 {
-    font-size: 28px !important;
-  }
-  
-  h2 {
-    font-size: 22px !important;
-  }
-
-  /* 4. Pastikan gambar & form menyesuaikan lebar layar HP */
-  img, input, textarea, button {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-}
-
-
-/* KITA COBAIN YAH RESPONSIF INI */
 /* =========================================================
-   PERBAIKAN RESPONGSIF UNTUK LAYAR HP (Maksimal 768px)
+   SINGLE CLEAN MEDIA QUERY (RESPONSIVE UNTUK HP / TABLET)
    ========================================================= */
-@media screen and (max-width: 768px) {
-
-  /* 1. Cegah layar bisa digeser ke kanan/kiri */
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* 2. Bikin semua container utama menyesuaikan layar HP */
-  body, .container, .main-container, .wrapper, section {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 10px !important;
-    box-sizing: border-box;
-  }
-
-  /* 3. Bikin Navbar / Menu Atas Bisa Di-scroll Horizontal kalau Kebanyakan */
-  nav, .navbar, .nav-container {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: flex-start !important;
-    overflow-x: auto !important; /* Menu bisa di-scroll ke samping kalau sempit */
-    white-space: nowrap;
-    padding: 10px !important;
-  }
-
-  /* 4. Bikin Layout Kontak & Form Jadi 1 Kolom Bersusun (Atas-Bawah) */
-  .contact-section, .contact-container, .grid, .flex-row {
-    display: flex !important;
-    flex-direction: column !important; /* Dari samping jadi bersusun ke bawah */
-    width: 100% !important;
-    gap: 15px !important;
-  }
-
-  /* 5. Paksa Kartu Kontak & Form memenuhi lebar HP */
-  .contact-info, .contact-form, .card, fieldset {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
-
-  /* 6. Atur ulang ukuran font judul agar tidak kepotong */
-  h1, .hero-title, .title {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    word-break: break-word; /* Mencegah nama/teks panjang terpotong */
-  }
-
-  h2 {
-    font-size: 20px !important;
-  }
-
-  /* 7. Input & Tombol muat sempurna di dalam layar */
-  input, textarea, button, .btn {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-}
-
-/* cobain lagiyah */
-/* =========================================
-   RESPONSIVE STYLES (MOBILE FRIENDLY)
-========================================== */
-
-/* Tombol Hamburger sembunyi di layar Laptop/Desktop */
-.hamburger-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 8px;
-}
-
-/* MEDIA QUERY UNTUK TAMPILAN HP (Max-Width 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     
-    /* 1. LAYOUT UMUM & CONTAINER */
-    body {
-        overflow-x: hidden;
+    /* 1. HERO SECTION ADJUSTMENT */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 20px 40px 20px;
+        gap: 30px;
     }
 
+    .hero-content {
+        margin: auto;
+    }
+
+    #heroTitle {
+        font-size: clamp(32px, 8vw, 48px);
+        letter-spacing: -1px;
+    }
+
+    .title-word {
+        white-space: normal;
+    }
+
+    .profession-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        margin-top: 10px;
+    }
+
+    .image-container {
+        width: 80vw;
+        max-width: 320px;
+        min-width: 240px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* 2. LAYOUT PENGALAMAN, PROYEK, KONTAK (SAMPING -> ATAS BAWAH) */
     .contact-wrapper,
     .exp-container,
     .about-lower {
-        flex-direction: column !important; /* Susun ke bawah, bukan ke samping */
+        flex-direction: column !important;
         gap: 24px !important;
     }
 
@@ -1216,30 +1150,29 @@ body {
     .projects-grid,
     .skills-grid,
     .cert-grid {
-        grid-template-columns: 1fr !important; /* Buat jadi 1 kolom saja di HP */
+        grid-template-columns: 1fr !important;
     }
 
-    /* 2. NAVBAR & HAMBURGER MENU (MIRIP CHATGPT/GEMINI) */
+    /* 3. NAVBAR & HAMBURGER MENU DROPDOWN */
     .main-nav {
         position: relative;
         justify-content: space-between;
         align-items: center;
         padding: 12px 20px;
-        width: 90%;
+        width: 92%;
         margin: 10px auto;
     }
 
     .hamburger-btn {
-        display: block; /* Tampilkan tombol hamburger di HP */
+        display: block;
     }
 
-    /* Tampilan drawer menu saat tertutup */
     .nav-menu {
         position: absolute;
         top: 65px;
         right: 0;
         width: 220px;
-        background: #18181b; /* Background gelap khas tema kamu */
+        background: #18181b;
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         padding: 20px;
@@ -1247,8 +1180,6 @@ body {
         flex-direction: column;
         gap: 16px;
         box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        
-        /* Efek transisi halus (tersembunyi secara default) */
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
@@ -1256,7 +1187,6 @@ body {
         z-index: 1000;
     }
 
-    /* Saat menu terbuka (diklik) */
     .nav-menu.open {
         opacity: 1;
         visibility: visible;
@@ -1273,17 +1203,21 @@ body {
         justify-content: flex-start;
     }
 
-    /* 3. DETAIL PAGE ADJUSTMENTS */
+    /* 4. DETAIL PAGE & FORM ADJUSTMENTS */
     .project-detail-page {
         padding: 80px 20px 40px 20px !important;
     }
 
     .detail-header h1 {
-        font-size: 24px !important;
+        font-size: 22px !important;
     }
 
     .back-link-top {
         top: 16px;
         left: 16px;
+    }
+
+    input, textarea, button {
+        max-width: 100%;
     }
 }

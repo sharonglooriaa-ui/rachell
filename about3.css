@@ -35,11 +35,12 @@
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
+    /* Mencegah avatar/elemen di dalam tumpah */
     max-height: 48px;
     box-sizing: border-box;
 }
 
-/* AVATAR KEPALA */
+/* AVATAR KEPALA (UKURAN PROPORSIONAL) */
 .nav-avatar-img {
     width: 35px;
     height: 35px;
@@ -280,10 +281,12 @@
     transform-style: preserve-3d;
 }
 
+/* HOVER EFFECT: BERBALIK 180 DERAJAT */
 .skill-card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
+/* SISI DEPAN DAN BELAKANG KARTU */
 .card-front,
 .card-back {
     position: absolute;
@@ -301,6 +304,7 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* DEPAN: GAMBAR FULL FRAME */
 .card-front {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
@@ -315,6 +319,7 @@
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
+/* BELAKANG: TEKS NAMA TOOL */
 .card-back {
     background: linear-gradient(135deg, rgba(244, 155, 196, 0.2), rgba(20, 20, 20, 0.95));
     border-color: rgba(244, 155, 196, 0.4);
@@ -335,7 +340,92 @@
     border-color: rgba(244, 155, 196, 0.5);
 }
 
-/* LANGUAGE SWITCHER */
+
+/* =========================================
+   RESPONSIVE LAYOUTS
+========================================= */
+
+@media (max-width: 1000px) {
+    .main-nav {
+        right: 20px;
+    }
+
+    .about-page {
+        padding: 120px 6% 60px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .about-lower {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .home-btn {
+        top: 15px;
+        left: 15px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .home-btn svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .main-nav {
+        top: 15px;
+        right: 15px;
+        left: 70px;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    .nav-avatar-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .nav-link {
+        padding: 8px 11px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .about-page {
+        padding: 100px 22px 50px;
+    }
+
+    .highlight-item h2 {
+        font-size: 32px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .card-front,
+    .card-back {
+        border-radius: 12px;
+    }
+
+    .card-back span {
+        font-size: 10px;
+    }
+}
+
+/* switchers */
 .lang-switcher {
     display: flex;
     align-items: center;
@@ -356,64 +446,69 @@
 }
 
 .lang-btn.active, .lang-btn:hover {
-    color: #ff69b4;
+    color: #ff69b4; /* Warna aksen/pink tema kamu */
 }
 
+/* kita cobain responsif */
+/* =========================================================
+   PERBAIKAN RESPONGSIF PERMANEN UNTUK LAYAR HP (<= 768px)
+   ========================================================= */
+@media screen and (max-width: 768px) {
 
-/* =========================================
-   CLEAN RESPONSIVE LAYOUTS (TABLET & HP)
-========================================= */
+  /* 1. Kunci body & html agar tidak bisa digeser ke kanan sama sekali */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-@media (max-width: 900px) {
-    .about-page {
-        padding: 90px 20px 50px;
-    }
+  /* 2. Paksa Hero / Main Container masuk ke dalam layar HP */
+  .hero, .hero-section, .hero-container, main, header, section {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important; /* Susun elemen dari atas ke bawah */
+    align-items: center !important;     /* Tengahkan semua konten */
+    text-align: center !important;
+  }
 
-    .about-label {
-        margin-bottom: 30px;
-        font-size: 15px;
-    }
+  /* 3. Perbaiki Judul "Hi, I'm Rachell Helena..." agar membungkus rapi */
+  h1, .hero-title, .title, .main-heading {
+    font-size: 26px !important;       /* Perkecil ukuran font agar cukup di HP */
+    line-height: 1.3 !important;
+    width: 100% !important;
+    white-space: normal !important;   /* PENTING: izinkan teks turun ke baris baru */
+    word-break: break-word !important;/* Cegah teks panjang kepotong */
+    margin: 10px 0 !important;
+  }
 
-    /* Ubah Highlight 3 Kolom menjadi 1 Kolom Bersusun di HP */
-    .about-highlights {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin-bottom: 40px;
-    }
+  /* 4. Perbaiki Tag Sub-judul ("Front-End Web", "Enterprise Architect") */
+  .tags, .sub-title, .badges, .roles {
+    display: flex !important;
+    flex-wrap: wrap !important;       /* Bikin badge/tag turun ke bawah jika penuh */
+    justify-content: center !important;
+    gap: 8px !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
 
-    .highlight-item {
-        padding: 20px;
-    }
+  /* 5. Perbaiki Foto agar tidak melebar melampaui layar */
+  .hero-img, .profile-img, img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 15px auto !important;
+  }
 
-    .highlight-item h2 {
-        font-size: 28px;
-    }
-
-    /* Ubah Lower Content (Deskripsi & Skills) dari 2 Kolom jadi 1 Kolom */
-    .about-lower {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    /* Kartu Keahlian/Skills disesuaikan jadi 3 Kolom di HP agar tidak kekecilan */
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-
-    .card-front,
-    .card-back {
-        border-radius: 12px;
-    }
-
-    .card-back span {
-        font-size: 10px;
-    }
-
-    .home-btn {
-        top: 15px;
-        left: 15px;
-        width: 38px;
-        height: 38px;
-    }
+  /* 6. Perbaiki Tombol "Explore" */
+  .btn, .btn-primary, button, a.button {
+    width: auto !important;
+    max-width: 100% !important;
+    padding: 10px 24px !important;
+    display: inline-block !important;
+  }
 }
