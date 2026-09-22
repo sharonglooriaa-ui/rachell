@@ -1107,3 +1107,69 @@ body {
     width: 100% !important;
   }
 }
+
+
+/* KITA COBAIN YAH RESPONSIF INI */
+/* =========================================================
+   PERBAIKAN RESPONGSIF UNTUK LAYAR HP (Maksimal 768px)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+
+  /* 1. Cegah layar bisa digeser ke kanan/kiri */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 2. Bikin semua container utama menyesuaikan layar HP */
+  body, .container, .main-container, .wrapper, section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  /* 3. Bikin Navbar / Menu Atas Bisa Di-scroll Horizontal kalau Kebanyakan */
+  nav, .navbar, .nav-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important; /* Menu bisa di-scroll ke samping kalau sempit */
+    white-space: nowrap;
+    padding: 10px !important;
+  }
+
+  /* 4. Bikin Layout Kontak & Form Jadi 1 Kolom Bersusun (Atas-Bawah) */
+  .contact-section, .contact-container, .grid, .flex-row {
+    display: flex !important;
+    flex-direction: column !important; /* Dari samping jadi bersusun ke bawah */
+    width: 100% !important;
+    gap: 15px !important;
+  }
+
+  /* 5. Paksa Kartu Kontak & Form memenuhi lebar HP */
+  .contact-info, .contact-form, .card, fieldset {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* 6. Atur ulang ukuran font judul agar tidak kepotong */
+  h1, .hero-title, .title {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    word-break: break-word; /* Mencegah nama/teks panjang terpotong */
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  /* 7. Input & Tombol muat sempurna di dalam layar */
+  input, textarea, button, .btn {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}

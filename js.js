@@ -183,3 +183,16 @@ imageContainer.addEventListener(
 
     }
 );
+
+// yuk cobain responsif
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      // Menambah / menghapus class 'active' saat diklik
+      navMenu.classList.toggle("active");
+    });
+  }
+});
