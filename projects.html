@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Rachell Helena</title>
+
+    <!-- Global Style -->
+    <link rel="stylesheet" href="css.css">
+    <!-- About/Global Nav Style -->
+    <link rel="stylesheet" href="about.css">
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+    <a href="index.html" class="home-btn" aria-label="Go to Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+    </a>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+    <div class="about-glow about-glow-one"></div>
+    <div class="about-glow about-glow-two"></div>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+    <nav class="main-nav">
+
+        <img src="avatar.png" alt="Avatar" class="nav-avatar-img">
+        <a href="about.html" class="nav-avatar"></a>
+
+        <a href="about.html" class="nav-link" data-en="About Me" data-id="Tentang Saya">
+            About Me
+        </a>
+
+        <a href="experience.html" class="nav-link" data-en="Experience" data-id="Pengalaman">
+            Experience
+        </a>
+
+        <a href="projects.html" class="nav-link active" data-en="Projects" data-id="Proyek">
+            Projects
+        </a>
+
+        <a href="contact.html" class="nav-link" data-en="Contact Me" data-id="Kontak">
+            Contact Me
+        </a>
+
+        <div class="lang-switcher">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <span>|</span>
+            <button id="lang-id" class="lang-btn">ID</button>
+        </div>
+
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="projects-page">
+
+        <!-- PAGE LABEL -->
+        <div class="about-label" data-en="FEATURED PROJECTS" data-id="PROYEK UNGGULAN">
+            FEATURED PROJECTS
+        </div>
+
+        <!-- CATEGORY FILTER BUTTONS -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all" data-en="All" data-id="Semua">All</button>
+            <button class="filter-btn" data-filter="dev" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</button>
+            <button class="filter-btn" data-filter="uiux" data-en="UI/UX Design" data-id="Desain UI/UX">UI/UX Design</button>
+            <button class="filter-btn" data-filter="infographic" data-en="Infographics" data-id="Infografis">Infographics</button>
+            <button class="filter-btn" data-filter="content" data-en="Content" data-id="Konten">Content</button>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="projects-grid">
+
+            <!-- PROJECT 1: GLITTER JOY -->
+            <a href="glitterjoy.html" class="project-card-link">
+                <div class="project-card" data-category="dev">
+                    <div class="project-img-wrapper">
+                        <img src="glitterjoy.png" alt="Glitter Joy">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                            <span class="badge live" data-en="Live Hosted" data-id="Terpublikasi">Live Hosted</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Glitter Joy — Console Rental Platform & SRS Documentation</h3>
+                        <p data-en="A web platform automating game console rentals with real-time slot availability, automated cost calculation, and SRS system documentation."
+                           data-id="Platform web yang mengotomatisasi penyewaan konsol game dengan ketersediaan slot real-time, kalkulasi biaya otomatis, dan dokumentasi sistem SRS.">
+                            A web platform automating game console rentals with real-time slot availability, automated cost calculation, and SRS system documentation.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 2: HOWL LIBRARY -->
+            <a href="howl.html" class="project-card-link">
+                <div class="project-card" data-category="dev">
+                    <div class="project-img-wrapper">
+                        <img src="howl.png" alt="Library Booking System">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                            <span class="badge live" data-en="Live Hosted" data-id="Terpublikasi">Live Hosted</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Howl — Library Booking & Membership System</h3>
+                        <p data-en="A library book borrowing and membership management application, designed from a Figma prototype and developed into a fully functional front-end implementation."
+                           data-id="Aplikasi peminjaman buku dan manajemen keanggotaan perpustakaan, dirancang dari prototipe Figma hingga diimplementasikan secara menyeluruh di sisi front-end.">
+                            A library book borrowing and membership management application, designed from a Figma prototype and developed into a fully functional front-end implementation.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 3: DAMAKARA -->
+            <a href="damakara.html" class="project-card-link">
+                <div class="project-card" data-category="dev uiux">
+                    <div class="project-img-wrapper">
+                        <img src="damakara.jpeg" alt="Integrated Fashion Enterprise System Solution">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                            <span class="badge" data-en="UI/UX" data-id="UI/UX">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Damakara — Integrated Fashion Enterprise System Solution</h3>
+                        <p data-en="A comprehensive e-commerce platform for clothing sales with features including shopping cart, payment processing, and inventory management."
+                           data-id="Platform e-commerce pakaian komprehensif yang dilengkapi fitur keranjang belanja, proses pembayaran, hingga manajemen inventaris.">
+                            A comprehensive e-commerce platform for clothing sales with features including shopping cart, payment processing, and inventory management.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 4: EDUSPHERE -->
+            <a href="edusphere.html" class="project-card-link">
+                <div class="project-card" data-category="dev">
+                    <div class="project-img-wrapper">
+                        <img src="lms.png" alt="LMS">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>EduSphere — Accessible Learning Management System</h3>
+                        <p data-en="A creative and inclusive LMS app designed using the Design Thinking approach, created to support learners across different educational levels, from elementary school to university, with integrated AI assistant support."
+
+data-id="Aplikasi LMS yang kreatif dan inklusif, dirancang menggunakan pendekatan Design Thinking untuk mendukung pelajar dari berbagai jenjang pendidikan, mulai dari sekolah dasar hingga perguruan tinggi, dengan integrasi asisten AI.">
+                            An inclusive LMS mobile app redesign crafted using the Design Thinking approach, featuring integrated AI assistant support.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 5: KESETARAAN DISABILITAS -->
+            <a href="kesetaraan.html" class="project-card-link">
+                <div class="project-card" data-category="infographic">
+                    <div class="project-img-wrapper">
+                        <img src="kesetaraan.jpg" alt="Disability Equality & Social Inclusivity Infographic Poster Design">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Infographics" data-id="Infografis">Infographics</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="Disability Equality & Inclusivity Infographic" data-id="Infografis Kesetaraan & Inklusivitas Disabilitas">Disability Equality & Inclusivity Infographic</h3>
+                        <p data-en="An educational poster using a vibrant pink palette and approachable visual elements to promote social equality and accessible public infrastructure."
+                           data-id="Poster edukatif berpalet warna pink cerah dengan elemen visual yang ramah untuk mengampanyekan kesetaraan sosial dan fasilitas umum yang aksesibel.">
+                            An educational poster using a vibrant pink palette and approachable visual elements to promote social equality and accessible public infrastructure.
+                        </p>
+                        <div class="project-tech">
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 6: VIRTUPLAN -->
+            <a href="posterVP.html" class="project-card-link">
+                <div class="project-card" data-category="infographic uiux">
+                    <div class="project-img-wrapper">
+                        <img src="web_VP.png" alt="VirtuPlan">
+                        <div class="project-badges">
+                            <span class="badge" data-en="UI/UX" data-id="UI/UX">UI/UX</span>
+                            <span class="badge" data-en="Infographics" data-id="Infografis">Infographics</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>VirtuPlan — Time Management & Productivity App</h3>
+                        <p data-en="A clean and intuitive productivity app prototype designed to help users prioritize tasks, manage schedules, and boost daily efficiency without distraction."
+                           data-id="Prototipe aplikasi produktivitas yang bersih dan intuitif untuk membantu pengguna memprioritaskan tugas, mengelola jadwal, dan meningkatkan efisiensi harian.">
+                            A clean and intuitive productivity app prototype designed to help users prioritize tasks, manage schedules, and boost daily efficiency without distraction.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 7: HIMASIF -->
+            <a href="himasif.html" class="project-card-link">
+                <div class="project-card" data-category="content">
+                    <div class="project-img-wrapper">
+                        <img src="konten.png" alt="Content Creation Project">
+                        <div class="project-badges">
+                            <span class="badge" data-en="Content" data-id="Konten">Content</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>HIMASIF — Social Media Content Management</h3>
+                        <p data-en="Head of Multimedia Division driving social media presence by conceptualizing content ideas, taking member & event photos, and guiding team-wide editing and posting."
+                           data-id="Kepala Divisi Multimedia yang mendorong branding media sosial melalui ideasi konten, dokumentasi foto anggota & acara, serta mengarahkan penyuntingan dan publikasi tim.">
+                            Head of Multimedia Division driving social media presence by conceptualizing content ideas, taking member & event photos, and guiding team-wide editing and posting.
+                        </p>
+                        <div class="project-tech">
+                            <span>CapCut</span>
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 8: ELO -->
+            <a href="elo.html" class="project-card-link">
+                <div class="project-card" data-category="uiux">
+                    <div class="project-img-wrapper">
+                        <img src="elo.png" alt="ELO App">
+                        <div class="project-badges">
+                            <span class="badge" data-en="UI/UX" data-id="UI/UX">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ELO — Gamified Communication Skill Learning App</h3>
+                        <p data-en="A fun and structured UI/UX prototype designed in Figma to make public speaking practice accessible through daily level-based challenges."
+                           data-id="Prototipe UI/UX interaktif di Figma yang dirancang untuk mempermudah latihan public speaking melalui tantangan harian berbasis level.">
+                            A fun and structured UI/UX prototype designed in Figma to make public speaking practice accessible through daily level-based challenges.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 11: CLEVAGO -->
+            <a href="clevago.html" class="project-card-link">
+                <div class="project-card" data-category="uiux">
+                    <div class="project-img-wrapper">
+                        <img src="laundry1.png" alt="ui/ux">
+                        <div class="project-badges">
+                            <span class="badge" data-en="UI/UX" data-id="UI/UX">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Clevago — Enterprise Back-Office & Vendor Management System</h3>
+                        <p data-en="An internal enterprise dashboard optimizing laundry operations through vendor management, automated inventory tracking, and machine maintenance scheduling."
+                           data-id="Dashboard internal enterprise untuk mengoptimalkan operasional laundry melalui manajemen vendor, pelacakan inventaris otomatis, dan penjadwalan pemeliharaan mesin.">
+                            An internal enterprise dashboard optimizing laundry operations through vendor management, automated inventory tracking, and machine maintenance scheduling.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT 12: FILMINT -->
+            <a href="filmint.html" class="project-card-link">
+                <div class="project-card" data-category="uiux">
+                    <div class="project-img-wrapper">
+                        <img src="filmit.png" alt="Filmint">
+                        <div class="project-badges">
+                            <span class="badge" data-en="UI/UX" data-id="UI/UX">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Filmint — Movie Streaming & Subscription Web Platform</h3>
+                        <p data-en="A Netflix-inspired UI/UX web concept featuring catalog browsing, genre filtering, subscription plan selections, and high-definition video player interfaces."
+                           data-id="Konsep web UI/UX terinspirasi dari Netflix yang mencakup pencarian katalog, filter genre, pilihan paket berlangganan, dan antarmuka pemutar video HD.">
+                            A Netflix-inspired UI/UX web concept featuring catalog browsing, genre filtering, subscription plan selections, and high-definition video player interfaces.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- =========================================
+         PROJECT DETAIL MODAL (POP-UP)
+    ========================================== -->
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content from JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Filter Interaktif & Language Switcher -->
+    <script src="projects.js"></script>
+    <script src="about.js"></script>
+
+</body>
+
+</html>

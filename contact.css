@@ -1,0 +1,255 @@
+/* =========================================
+   CONTACT PAGE STYLES (2-COLUMN LAYOUT)
+========================================= */
+
+.contact-page {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 130px 24px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTAINER 2 KOLOM */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+    background: rgba(18, 18, 22, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* SISI KIRI (INFO & SOCIAL LINKS) */
+.contact-sub {
+    color: #f49bc4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-info-side h1 {
+    color: #f5f5f5;
+    font-size: clamp(28px, 3.5vw, 36px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.contact-info-side p {
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* KARTU SOSIAL MEDIA VERTIKAL */
+.social-links-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f49bc4;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.social-val {
+    color: #888888;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.social-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(244, 155, 196, 0.4);
+    transform: translateX(4px);
+}
+
+.social-card:hover .social-icon {
+    background: #f49bc4;
+    color: #0d0d0d;
+}
+
+/* SISI KANAN (FORM PESAN) */
+.contact-form-side {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 28px 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #e0e0e0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666666;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f49bc4;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 15px rgba(244, 155, 196, 0.2);
+}
+
+/* TOMBOL SEND */
+.send-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #f49bc4;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(244, 155, 196, 0.25);
+    margin-top: 8px;
+}
+
+.send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(244, 155, 196, 0.4);
+    background: #f18cb9;
+}
+
+.send-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.send-btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+/* RESPONSIVE LAYOUT (UNTUK LAYAR HP) */
+@media (max-width: 800px) {
+    .contact-page {
+        padding: 100px 18px 50px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Tumpuk 1 kolom di HP */
+        gap: 30px;
+        padding: 24px 18px;
+    }
+
+    .contact-form-side {
+        padding: 20px 16px;
+    }
+}
+
+/* INI BEDA LAGI YEAH */
+/* 1. Atur container utama agar kedua kolom sejajar dan sama tingginya */
+.contact-wrapper {
+    display: flex;
+    align-items: stretch; /* Memaksa kolom kiri dan kanan memiliki tinggi yang sama persis */
+    gap: 32px;
+    width: 100%;
+}
+
+/* 2. Berikan style container/kartu yang sama pada Sisi Kiri */
+.contact-info-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Menyebarkan konten dari atas ke bawah secara proporsional */
+}
+
+/* 3. Pastikan Sisi Kanan mengisi seluruh tinggi kolom */
+.contact-form-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 4. Samakan tinggi 4 kartu kontak agar fleksibel mengisi ruang */
+.social-links-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%; /* Mengisi sisa ruang kosong di sisi kiri */
+    justify-content: space-between;
+}
+
+.social-card {
+    flex: 1; /* Membuat ke-4 kartu membagi tinggi secara seimbang */
+    display: flex;
+    align-items: center;
+}

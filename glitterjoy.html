@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitter Joy — Project Detail</title>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND GLOW -->
+    <div class="about-glow about-glow-one"></div>
+    <div class="about-glow about-glow-two"></div>
+
+    <!-- TOMBOL BACK (MELAYANG DI POJOK KIRI ATAS) -->
+    <a href="projects.html" class="back-link-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span data-en="Back to All Projects" data-id="Kembali ke Semua Proyek">Back to All Projects</span>
+    </a>
+
+    <!-- MAIN CONTENT -->
+    <main class="project-detail-page">
+
+        <!-- HEADER DETAIL -->
+        <header class="detail-header">
+            <div class="detail-tags">
+                <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                <span class="badge live" data-en="Live Hosted" data-id="Tersedia Online">Live Hosted</span>
+            </div>
+
+            <h1 data-en="Glitter Joy — Console Rental Booking Platform & SRS Documentation"
+                data-id="Glitter Joy — Platform Penyewaan Konsol Game & Dokumentasi SRS">
+                Glitter Joy — Console Rental Booking Platform & SRS Documentation
+            </h1>
+
+            <div class="detail-tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Figma</span>
+            </div>
+        </header>
+
+        <!-- ACTION BUTTONS -->
+        <div class="detail-action-btns">
+            <a href="https://glitterjoy-games.netlify.app/" target="_blank" class="action-btn primary">
+                🔗 <span data-en="Try Live Demo" data-id="Coba Demo Langsung">Try Live Demo</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1YwRCPQuDsyfUG7H-Q16GEX9RdEX9Lzpl/view?usp=drive_link" target="_blank" class="action-btn primary">
+                📄 <span data-en="View SRS Document (PDF)" data-id="Lihat Dokumen SRS (PDF)">View SRS Document (PDF)</span>
+            </a>
+        </div>
+
+        <!-- BANNER / COVER UTAMA PROJECT -->
+        <div class="detail-hero-img">
+            <img src="glitterjoy.png" alt="Glitter Joy Banner Cover">
+        </div>
+
+        <!-- ARTICLE CONTENT -->
+        <article class="detail-article">
+
+            <section class="detail-section">
+                <h2 data-en="Overview & Background" data-id="Gambaran Umum & Latar Belakang">Overview & Background</h2>
+                <p data-en="Glitter Joy was developed to resolve operational inefficiencies in the game console rental system (PlayStation & Nintendo). Conventional processes often led to issues such as unconfirmed unit availability, inaccurate cost calculations, and double-booking risks. To address these challenges, Glitter Joy was built as a hosted, independent web platform that digitizes and automates the reservation workflow in real time."
+                   data-id="Glitter Joy dikembangkan untuk mengatasi ketidakfleksibelan operasional pada sistem penyewaan konsol game (PlayStation & Nintendo). Proses konvensional sering kali memicu kendala seperti ketersediaan unit yang tidak pasti, kalkulasi biaya yang tidak akurat, serta risiko pemesanan ganda. Untuk mengatasi masalah tersebut, Glitter Joy dibangun sebagai platform web independen yang mendigitalisasi dan mengotomatisasi alur reservasi secara real-time.">
+                    Glitter Joy was developed to resolve operational inefficiencies in the game console rental system (PlayStation & Nintendo). Conventional processes often led to issues such as unconfirmed unit availability, inaccurate cost calculations, and double-booking risks. To address these challenges, <strong>Glitter Joy</strong> was built as a hosted, independent web platform that digitizes and automates the reservation workflow in real time.
+                </p>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="System Mechanism & Workflow" data-id="Mekanisme & Alur Kerja Sistem">System Mechanism & Workflow</h2>
+                <p data-en="The platform provides complete transparency, allowing prospective renters to view available time slots instantly. Once the user selects a unit, date, and rental duration, the system automatically calculates the total cost. To secure reservations, users are given a 10-minute window to validate their payment by uploading proof of transfer via WhatsApp. Upon verification by the admin, the slot status in the database automatically updates to booked."
+                   data-id="Platform ini menyediakan transparansi penuh, memungkinkan calon penyewa untuk melihat slot waktu yang tersedia secara instan. Setelah pengguna memilih unit, tanggal, dan durasi sewa, sistem secara otomatis menghitung total biaya. Untuk mengamankan reservasi, pengguna diberikan batas waktu 10 menit untuk memvalidasi pembayaran dengan mengunggah bukti transfer via WhatsApp. Setelah diverifikasi oleh admin, status slot di basis data secara otomatis terbarui menjadi terpesan (booked).">
+                    The platform provides complete transparency, allowing prospective renters to view available time slots instantly. Once the user selects a unit, date, and rental duration, the system automatically calculates the total cost. To secure reservations, users are given a 10-minute window to validate their payment by uploading proof of transfer via WhatsApp. Upon verification by the admin, the slot status in the database automatically updates to <em>booked</em>.
+                </p>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="System Analysis Approach" data-id="Pendekatan Analisis Sistem">System Analysis Approach</h2>
+                <p data-en="In addition to full-stack web development, this project includes a comprehensive Software Requirements Specification (SRS) document. This document details functional and non-functional requirements as well as data flow modeling, serving as a structured application of software engineering principles."
+                   data-id="Selain pengembangan web front-end, proyek ini mencakup dokumen Software Requirements Specification (SRS) yang komprehensif. Dokumen ini merinci kebutuhan fungsional dan non-fungsional serta pemodelan alur data sebagai penerapan terstruktur dari prinsip-prinsip rekayasa perangkat lunak.">
+                    In addition to full-stack web development, this project includes a comprehensive <strong>Software Requirements Specification (SRS)</strong> document. This document details functional and non-functional requirements as well as data flow modeling, serving as a structured application of software engineering principles.
+                </p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- JS untuk otomatis membaca bahasa dari localStorage -->
+    <script src="lang-sync.js"></script>
+
+</body>
+
+</html>

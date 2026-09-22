@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howl — Project Detail</title>
+
+    <!-- Global & Component Styles -->
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <!-- Style Khusus Detail Page -->
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND GLOW -->
+    <div class="about-glow about-glow-one"></div>
+    <div class="about-glow about-glow-two"></div>
+
+    <!-- TOMBOL BACK TO ALL PROJECTS (POJOK KIRI ATAS) -->
+    <a href="projects.html" class="back-link-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span data-en="Back to All Projects" data-id="Kembali ke Semua Proyek">Back to All Projects</span>
+    </a>
+
+    <!-- MAIN CONTENT -->
+    <main class="project-detail-page">
+
+        <!-- HEADER DETAIL -->
+        <header class="detail-header">
+            <div class="detail-tags">
+                <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+                <span class="badge" data-en="UI/UX Design" data-id="Desain UI/UX">UI/UX Design</span>
+            </div>
+
+            <h1 data-en="Howl — Independent Library Management & Database Architecture"
+                data-id="Howl — Manajemen Perpustakaan Independen & Arsitektur Basis Data">
+                Howl — Independent Library Management & Database Architecture
+            </h1>
+
+            <div class="detail-tech-stack">
+                <span>Figma</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </header>
+
+        <div class="detail-action-btns">
+            <a href="https://howl-project-woad.vercel.app" target="_blank" class="action-btn primary">
+                🔗 <span data-en="Try Live Demo" data-id="Coba Demo Langsung">Try Live Demo</span>
+            </a>
+        </div>
+
+        <!-- BANNER / COVER UTAMA PROJECT -->
+        <div class="detail-hero-img">
+            <img src="web_howl.png" alt="Howl Library Banner Cover">
+        </div>
+
+        <!-- ARTICLE / NASKAH PENJELASAN -->
+        <article class="detail-article">
+
+            <section class="detail-section">
+                <h2 data-en="Overview & Field Approach" data-id="Gambaran Umum & Pendekatan Lapangan">Overview & Field Approach</h2>
+                <p data-en="Independent libraries require a flexible, personalized operational management approach compared to public libraries. For this project, our team collaborated closely with the owner of Howl Library through in-depth interviews and field research to analyze daily operational bottlenecks and design a tailored system solution."
+                   data-id="Perpustakaan independen membutuhkan pendekatan manajemen operasional yang fleksibel dan terpersonalisasi dibanding perpustakaan umum. Untuk proyek ini, tim kami berkolaborasi erat dengan pemilik Howl Library melalui wawancara mendalam dan riset lapangan untuk menganalisis kendala operasional harian serta merancang solusi sistem yang disesuaikan.">
+                    Independent libraries require a flexible, personalized operational management approach compared to public libraries. For this project, our team collaborated closely with the owner of <strong>Howl Library</strong> through in-depth interviews and field research to analyze daily operational bottlenecks and design a tailored system solution.
+                </p>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="Three Core System Modules" data-id="Tiga Modul Utama Sistem">Three Core System Modules</h2>
+                <p data-en="The management system was engineered around three primary modules to streamline daily library activities:"
+                   data-id="Sistem manajemen ini dirancang mencakup tiga modul utama untuk mengoptimalkan aktivitas harian perpustakaan:">
+                    The management system was engineered around three primary modules to streamline daily library activities:
+                </p>
+                <ul style="color: #b7b7b7; font-size: 16px; line-height: 1.85; padding-left: 20px; margin-top: 10px;">
+                    <li data-en="Reservation Module: Calculates room capacity in real time, supporting online reservations, group orders, and walk-in visitors. It also integrates with external printers to generate wristband access labels."
+                        data-id="Modul Reservasi: Menghitung kapasitas ruangan secara real-time, mendukung reservasi online, pemesanan grup, dan pengunjung langsung (walk-in). Modul ini juga terintegrasi dengan printer eksternal untuk mencetak label gelang akses.">
+                        <strong>Reservation Module:</strong> Calculates room capacity in real time, supporting online reservations, group orders, and walk-in visitors. It also integrates with external printers to generate wristband access labels.
+                    </li>
+                    <li data-en="Membership Module: Integrates NFC/QR Code keyrings with a multi-tiered membership system (Regular, Member, and Howl Crew). The system automates book borrowing limits, discount validations, and monthly attendance tracking."
+                        data-id="Modul Keanggotaan: Mengintegrasikan gantungan kunci NFC/QR Code dengan sistem keanggotaan bertingkat (Regular, Member, dan Howl Crew). Sistem mengotomatisasi batas peminjaman buku, validasi diskon, dan pelacakan kehadiran bulanan.">
+                        <strong>Membership Module:</strong> Integrates NFC/QR Code keyrings with a multi-tiered membership system (Regular, Member, and Howl Crew). The system automates book borrowing limits, discount validations, and monthly attendance tracking.
+                    </li>
+                    <li data-en="Book Circulation Module: Features a centralized dashboard for accurate book inventory monitoring, tracking availability statuses, transaction histories, and loan durations."
+                        data-id="Modul Sirkulasi Buku: Menyediakan dashboard terpusat untuk pemantauan inventaris buku yang akurat, melacak status ketersediaan, riwayat transaksi, dan durasi peminjaman.">
+                        <strong>Book Circulation Module:</strong> Features a centralized dashboard for accurate book inventory monitoring, tracking availability statuses, transaction histories, and loan durations.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="Database Architecture" data-id="Arsitektur Basis Data">Database Architecture</h2>
+                <p data-en="Beyond interface design, this project focuses on building a robust data foundation through Conceptual Database ERD, Logical Database, and Physical Database ERD phases, alongside executing SQL queries for efficient operational transaction management."
+                   data-id="Selain desain antarmuka, proyek ini berfokus pada pembangunan fondasi data yang kokoh melalui tahap ERD Konseptual, Basis Data Logis, dan ERD Fisik, serta eksekusi kueri SQL untuk manajemen transaksi operasional yang efisien.">
+                    Beyond interface design, this project focuses on building a robust data foundation through <strong>Conceptual Database ERD</strong>, <strong>Logical Database</strong>, and <strong>Physical Database ERD</strong> phases, alongside executing SQL queries for efficient operational transaction management.
+                </p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Script sinkronisasi bahasa otomatis -->
+    <script src="lang-sync.js"></script>
+
+</body>
+
+</html>

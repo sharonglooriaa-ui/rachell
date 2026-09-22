@@ -1,0 +1,1076 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(255, 125, 190, 0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 80, 160, 0.08),
+            transparent 30%
+        ),
+        #050505;
+
+    color: white;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.bg-glow {
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(100px);
+
+    z-index: 0;
+}
+
+.bg-glow-1 {
+    width: 350px;
+    height: 350px;
+
+    background: rgba(255, 99, 177, 0.10);
+
+    top: 15%;
+    right: 15%;
+}
+
+.bg-glow-2 {
+    width: 250px;
+    height: 250px;
+
+    background: rgba(255, 170, 210, 0.06);
+
+    bottom: 10%;
+    left: 10%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        80px
+        8%
+        80px
+        8%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, 0.85fr);
+
+    align-items: center;
+
+    gap: 50px;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-content {
+
+    max-width: 680px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.intro-label {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #f7a6ca;
+
+    margin-bottom: 22px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+/* 
+#heroTitle {
+
+    font-size: clamp(
+        45px,
+        5.2vw,
+        78px
+    );
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+
+    max-width: 700px;
+} */
+
+
+/*
+    Individual letters created by JS
+*/
+/* =========================================
+   TITLE
+========================================= */
+
+#heroTitle {
+    font-size: clamp(
+        45px,
+        5.2vw,
+        78px
+    );
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+
+    max-width: 700px;
+
+    /*
+        Jangan biarkan kata dipotong
+        menjadi huruf-huruf terpisah.
+    */
+    overflow: visible;
+}
+
+
+/*
+    Setiap kata tetap satu kesatuan.
+*/
+
+.title-word {
+
+    display: inline-block;
+
+    white-space: nowrap;
+
+}
+
+
+/*
+    Setiap huruf jatuh sendiri.
+*/
+
+.title-letter {
+
+    display: inline-block;
+
+    opacity: 0;
+
+    transform:
+        translateY(-100px)
+        rotate(-8deg);
+
+    animation:
+        fallingLetter
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        forwards;
+}
+
+
+@keyframes fallingLetter {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-100px)
+            rotate(-8deg);
+
+    }
+
+    65% {
+
+        opacity: 1;
+
+        transform:
+            translateY(10px)
+            rotate(2deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+}
+
+/* =========================================
+   PROFESSION MARQUEE
+========================================= */
+
+.profession-wrapper {
+
+    margin-top: 32px;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    position: relative;
+
+    border: none;
+
+}
+
+
+.profession-track {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    width: max-content;
+
+    animation:
+        professionMove
+        18s
+        linear
+        infinite;
+}
+
+
+.profession-track span {
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    color: #f2f2f2;
+
+    letter-spacing: 0.3px;
+}
+
+
+.profession-track i {
+
+    font-style: normal;
+
+    color: #f38bb8;
+
+    font-size: 13px;
+}
+
+
+@keyframes professionMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+
+    margin-top: 30px;
+
+    max-width: 520px;
+
+    color: #a8a8a8;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 38px;
+}
+
+
+.hero-buttons a {
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-primary {
+
+    padding:
+        14px
+        20px;
+
+    background: #f59ac3;
+
+    color: #090909;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+
+.btn-primary:hover {
+
+    background: #ffc0dc;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(245, 154, 195, 0.25);
+}
+
+
+.btn-primary span {
+
+    font-size: 18px;
+}
+
+
+.btn-secondary {
+
+    color: #ddd;
+
+    padding: 14px 8px;
+
+}
+
+
+.btn-secondary:hover {
+
+    color: #f59ac3;
+
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+/* 
+.hero-visual {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+.image-container {
+
+    width: min(
+        430px,
+        35vw
+    );
+
+    min-width: 350px;
+
+    aspect-ratio: 408 / 612;
+
+    position: relative;
+
+    cursor: crosshair;
+
+    isolation: isolate;
+
+}
+ */
+
+/* =========================================
+   PINK GLOW
+========================================= */
+/* 
+.image-glow {
+
+    position: absolute;
+
+    inset: 7%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 125, 184, 0.28),
+            rgba(255, 125, 184, 0.08) 40%,
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    transform: scale(1.08);
+
+    z-index: -1;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+.image-container:hover .image-glow {
+
+    transform: scale(1.15);
+
+    opacity: 1;
+} */
+
+
+/* =========================================
+   PROFILE IMAGES
+========================================= */
+/* 
+.profile-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+/* Original stays visible */
+/* 
+.original-image {
+
+    z-index: 1;
+
+}
+ */
+
+/* Cartoon layer */
+/* 
+.cartoon-image {
+
+    z-index: 2; */
+
+    /*
+        JS controls these variables
+        to reveal the cartoon
+        around the cursor.
+    */
+/* 
+    clip-path:
+        circle(
+            var(--reveal-size, 0px)
+            at
+            var(--mouse-x, 50%)
+            var(--mouse-y, 50%)
+        );
+
+    transition:
+        clip-path 0.08s ease-out;
+} */ 
+
+
+/* =========================================
+   CURSOR LIGHT
+========================================= */
+/* 
+.cursor-light {
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    left: var(--mouse-x, 50%);
+
+    top: var(--mouse-y, 50%);
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 180, 215, 0.10),
+            transparent 65%
+        );
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.image-container:hover .cursor-light {
+
+    opacity: 1;
+} */
+
+
+/* =========================================
+   SOFT PINK EDGE
+========================================= */
+/* 
+.image-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8%;
+
+    border-radius: 45%;
+
+    border: 1px solid
+        rgba(255, 160, 205, 0.18);
+
+    filter: blur(1px);
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 130, 190, 0.12);
+
+}
+ */
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+
+/* Container foto */
+
+.image-container {
+    width: min(380px, 32vw);
+    min-width: 300px;
+
+    aspect-ratio: 408 / 612;
+
+    position: relative;
+
+    cursor: crosshair;
+
+    isolation: isolate;
+
+    /*
+        Foto diposisikan di tengah
+        secara vertikal.
+    */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SOFT PINK GLOW
+========================================= */
+
+.image-glow {
+
+    position: absolute;
+
+    /*
+        Dibuat sedikit lebih besar
+        dari foto
+    */
+
+    inset: 5%;
+
+    border-radius: 45%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 120, 185, 0.25) 0%,
+            rgba(255, 120, 185, 0.12) 35%,
+            rgba(255, 120, 185, 0.04) 60%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+
+    /*
+        PENTING:
+        glow ada DI BELAKANG foto
+    */
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+
+    opacity: 0.8;
+}
+
+
+.image-container:hover .image-glow {
+
+    opacity: 1;
+
+    transform: scale(1.12);
+}
+
+
+/* =========================================
+   PROFILE IMAGES
+========================================= */
+
+.profile-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    /*
+        Membesarkan orang di dalam foto
+        tanpa mengubah posisi container.
+    */
+    transform: scale(1);
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   FOTO ASLI
+========================================= */
+
+.original-image {
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   FOTO KARTUN
+========================================= */
+
+.cartoon-image {
+
+    z-index: 2;
+
+    /*
+        Default:
+        kartun tidak terlihat
+    */
+
+    opacity: 1;
+
+    /*
+        Mask mengikuti posisi cursor.
+        Bagian tengah = terlihat.
+        Bagian luar = transparan.
+    */
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle 105px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            black 0%,
+            black 45%,
+            rgba(0, 0, 0, 0.8) 60%,
+            transparent 100%
+        );
+
+    mask-image:
+        radial-gradient(
+            circle 105px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            black 0%,
+            black 45%,
+            rgba(0, 0, 0, 0.8) 60%,
+            transparent 100%
+        );
+
+    /*
+        Saat tidak hover,
+        mask dibuat tidak terlihat.
+    */
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CURSOR LIGHT
+========================================= */
+
+.cursor-light {
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 130px;
+
+    left: var(--mouse-x, 50%);
+
+    top: var(--mouse-y, 50%);
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    opacity: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 180, 215, 0.08),
+            transparent 65%
+        );
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.image-container:hover .cursor-light {
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   PINK EDGE GLOW
+========================================= */
+
+/*
+    JANGAN menggunakan ::before
+    sebagai border besar lagi.
+
+    Kita gunakan drop-shadow langsung
+    sehingga glow mengikuti siluet foto.
+*/
+
+.original-image {
+
+    transform: scale(1);
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255, 140, 195, 0.10)
+        );
+
+    transition: filter 0.4s ease;
+}
+
+
+.image-container:hover .original-image {
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(255, 140, 195, 0.18)
+        );
+}
+
+
+.cartoon-image {
+
+    transform: scale(1);
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(255, 140, 195, 0.15)
+        );
+}
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+ 
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    z-index: 5;
+}
+
+
+.scroll-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            #f19ac1,
+            transparent
+        );
+} 
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 70px;
+
+    }
+
+
+    .hero-content {
+
+        margin: auto;
+    }
+
+
+    .profession-wrapper {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+
+        margin-top: 20px;
+    }
+
+
+    .image-container {
+
+        width: min(
+            380px,
+            75vw
+        );
+
+        min-width: 280px;
+    }
+
+
+    .scroll-indicator {
+
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        padding:
+            50px
+            22px
+            70px;
+    }
+
+
+    #heroTitle {
+
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .profession-track span {
+
+        font-size: 14px;
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .image-container {
+
+        width: 90vw;
+
+        min-width: 260px;
+    }
+
+}
+
