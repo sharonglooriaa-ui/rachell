@@ -1074,3 +1074,36 @@ body {
 
 }
 
+/* Cobaan */
+/* Media Query untuk Layar HP / Mobile */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Atur container agar memiliki padding dan tidak menempel di tepi layar */
+  body, container, .main-content {
+    padding: 10px;
+    width: 100% !important;
+    overflow-x: hidden; /* Mencegah layar bisa digeser ke kanan/kiri */
+  }
+
+  /* 2. Ubah layout 2 kolom (seperti Form & Kontak) menjadi 1 kolom bersusun */
+  .contact-container, .grid, .flex-row {
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* 3. Perkecil ukuran font judul agar tidak jebol */
+  h1 {
+    font-size: 28px !important;
+  }
+  
+  h2 {
+    font-size: 22px !important;
+  }
+
+  /* 4. Pastikan gambar & form menyesuaikan lebar layar HP */
+  img, input, textarea, button {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
