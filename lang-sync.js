@@ -13,3 +13,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// kita coba yah
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+        // Toggle menu saat tombol diklik
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu otomatis jika user mengklik bagian luar layar
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+        // Toggle menu saat tombol diklik
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu otomatis jika user mengklik bagian luar layar
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+            }
+        });
+    }
+});

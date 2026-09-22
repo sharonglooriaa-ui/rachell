@@ -966,258 +966,222 @@ body {
 } 
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* =========================================================
+   STYLING DEFAULT (UNTUK DESKTOP / LAPTOP)
+   ========================================================= */
 
-@media (max-width: 1000px) {
-
-    .hero {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        padding-top: 70px;
-
-    }
-
-
-    .hero-content {
-
-        margin: auto;
-    }
-
-
-    .profession-wrapper {
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .hero-description {
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .hero-buttons {
-
-        justify-content: center;
-    }
-
-
-    .hero-visual {
-
-        margin-top: 20px;
-    }
-
-
-    .image-container {
-
-        width: min(
-            380px,
-            75vw
-        );
-
-        min-width: 280px;
-    }
-
-
-    .scroll-indicator {
-
-        display: none;
-    }
-
+/* Di Laptop/Desktop: Tombol Burger MUTLAK SEMBUNYI */
+.hamburger-btn {
+    display: none !important;
 }
 
-
-@media (max-width: 600px) {
-
-    .hero {
-
-        padding:
-            50px
-            22px
-            70px;
-    }
-
-
-    #heroTitle {
-
-        font-size: 43px;
-
-        letter-spacing: -2px;
-    }
-
-
-    .profession-track span {
-
-        font-size: 14px;
-    }
-
-
-    .hero-description {
-
-        font-size: 14px;
-    }
-
-
-    .hero-buttons {
-
-        flex-direction: column;
-
-        gap: 8px;
-    }
-
-
-    .image-container {
-
-        width: 90vw;
-
-        min-width: 260px;
-    }
-
+/* Di Laptop/Desktop: Menu tampil horizontal biasa */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 
 /* =========================================================
-   SINGLE CLEAN MEDIA QUERY (RESPONSIVE UNTUK HP / TABLET)
+   MEDIA QUERY KHUSUS TAMPILAN MOBILE / HP (max-width: 768px)
    ========================================================= */
-@media screen and (max-width: 900px) {
-    
-    /* 1. HERO SECTION ADJUSTMENT */
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 60px 20px 40px 20px;
-        gap: 30px;
+@media screen and (max-width: 768px) {
+
+    /* 1. MENCEGAH TEKS JUDUL KEPOTONG / BOCOR KE KANAN */
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
     }
+
+    .hero {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        padding: 90px 20px 40px 20px !important;
+    }
+
+    /* 1. ATURAN JUDUL UTAMA DI HP */
+    #heroTitle {
+        font-size: clamp(24px, 6.5vw, 36px) !important; /* Perkecil sedikit ukuran font di HP agar tidak kelebaran */
+        line-height: 1.3 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        
+        /* PENTING: Mencegah kata dipotong di tengah-tengah huruf */
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+
+    /* 2. ATURAN SETIAP KATA (ANIMASI TITLE) */
+    .title-word {
+        display: inline-block !important;
+        white-space: nowrap !important; /* Mencegah kata dipotong per-huruf */
+        word-break: keep-all !important; /* Menjaga kata utuh (misal "Gloria" tetap utuh) */
+    }
+
 
     .hero-content {
-        margin: auto;
+        max-width: 100% !important;
     }
 
-    #heroTitle {
-        font-size: clamp(32px, 8vw, 48px);
-        letter-spacing: -1px;
-    }
-
-    .title-word {
-        white-space: normal;
-    }
-
-    .profession-wrapper {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 14px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero-visual {
-        margin-top: 10px;
-    }
-
-    .image-container {
-        width: 80vw;
-        max-width: 320px;
-        min-width: 240px;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    /* 2. LAYOUT PENGALAMAN, PROYEK, KONTAK (SAMPING -> ATAS BAWAH) */
-    .contact-wrapper,
-    .exp-container,
-    .about-lower {
+    /* 2. LAYOUT CONTACT PAGE (FORM TIDAK KEPOTONG) */
+    .contact-wrapper {
         flex-direction: column !important;
-        gap: 24px !important;
+        gap: 20px !important;
+        width: 100% !important;
     }
 
-    .about-highlights,
-    .projects-grid,
-    .skills-grid,
-    .cert-grid {
-        grid-template-columns: 1fr !important;
+    .contact-info-side, .contact-form-side {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    /* 3. NAVBAR & HAMBURGER MENU DROPDOWN */
+    /* 3. NAVBAR & BUTTON BURGER DI HP (SUDUT KANAN ATAS) */
     .main-nav {
-        position: relative;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 20px;
-        width: 92%;
-        margin: 10px auto;
+        position: fixed !important;
+        top: 16px !important;
+        right: 16px !important;
+        left: auto !important; /* Terkunci rapi di sudut kanan atas */
+        width: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 6px 12px !important;
+        max-height: 48px !important;
+        background: rgba(18, 18, 21, 0.85) !important;
+        backdrop-filter: blur(16px) !important;
+        border-radius: 30px !important;
+        z-index: 1000 !important;
     }
 
+    /* TAMPILKAN TOMBOL BURGER DI HP */
     .hamburger-btn {
-        display: block;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: transparent !important;
+        border: none !important;
+        color: #fff !important;
+        cursor: pointer;
+        padding: 6px;
+        margin-left: 8px;
     }
 
+    /* SEMBUNYIKAN KUMPULAN MENU DI BALIK TOMBOL BURGER */
     .nav-menu {
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 220px;
-        background: #18181b;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        z-index: 1000;
+        display: none !important; 
+        position: absolute !important;
+        top: 55px !important;
+        right: 0 !important;
+        width: 200px !important;
+        background: #18181b !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 18px !important;
+        padding: 16px !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.7) !important;
+        z-index: 2000 !important;
     }
 
+    /* KETIKA TOMBOL BURGER DIKLIK, MENU AKAN MUNCUL */
     .nav-menu.open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        display: flex !important;
     }
 
     .nav-menu .nav-link {
-        display: block;
-        width: 100%;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 8px 10px !important;
     }
 
     .nav-menu .lang-switcher {
-        margin-top: 8px;
-        justify-content: flex-start;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-top: 8px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+}
+
+/* =========================================================
+   PERBAIKAN KHUSUS HERO / INDEX PAGE DI HP (max-width: 768px)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. KUNCI LAYAR AGAR TIDAK BISA DITOGEL KE KANAN */
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
     }
 
-    /* 4. DETAIL PAGE & FORM ADJUSTMENTS */
-    .project-detail-page {
-        padding: 80px 20px 40px 20px !important;
+    /* 2. RATAKAN SELURUH HERO CONTENT KE TENGAH */
+    .hero {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        padding: 90px 20px 40px 20px !important;
+        justify-items: center !important;
     }
 
-    .detail-header h1 {
-        font-size: 22px !important;
+    .hero-content {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Memaksa elemen anak (tombol, sub-label) ke tengah */
     }
 
-    .back-link-top {
-        top: 16px;
-        left: 16px;
+    .intro-label {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
-    input, textarea, button {
-        max-width: 100%;
+    /* 3. PERBAIKAN JUDUL (TEKS TURUN KE BAWAH & KE TENGAH) */
+    #heroTitle {
+        font-size: clamp(26px, 7vw, 38px) !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        max-width: 100% !important;
+    }
+
+    /* Opsi kunci: Hancurkan nowrap pada kata animasi agar kata mau patah/turun baris */
+    .title-word {
+        white-space: normal !important;
+        display: inline !important;
+    }
+
+    /* 4. MARQUEE KEAHLIAN (AGAR TIDAK DORONG LAYAR KE KANAN) */
+    .profession-wrapper {
+        width: 100% !important;
+        max-width: 320px !important; /* Batasi lebar container marquee di HP */
+        margin: 16px auto 0 auto !important;
+        overflow: hidden !important;
+    }
+
+    /* 5. TOMBOL EXPLORE KE TENGAH */
+    .hero-buttons {
+        justify-content: center !important;
+        width: 100% !important;
+        margin-top: 24px !important;
+    }
+
+    .btn-primary {
+        margin: 0 auto !important;
+    }
+
+    /* 6. FOTO PROFIL DI HP */
+    .hero-visual {
+        margin-top: 20px !important;
+        width: 100% !important;
+    }
+
+    .image-container {
+        width: 80vw !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
     }
 }
