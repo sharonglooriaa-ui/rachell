@@ -196,3 +196,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem('preferredLang') || 'id';
   setLanguage(savedLang);
 });
+
+// huberger
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu otomatis jika user mengklik di luar area menu
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+            }
+        });
+    }
+});

@@ -1,3 +1,11 @@
+/* Mencegah layar bocor / bisa di-scroll ke samping */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* =========================================
    RESET
 ========================================= */
@@ -1172,4 +1180,110 @@ body {
     width: 100% !important;
     box-sizing: border-box;
   }
+}
+
+/* cobain lagiyah */
+/* =========================================
+   RESPONSIVE STYLES (MOBILE FRIENDLY)
+========================================== */
+
+/* Tombol Hamburger sembunyi di layar Laptop/Desktop */
+.hamburger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* MEDIA QUERY UNTUK TAMPILAN HP (Max-Width 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. LAYOUT UMUM & CONTAINER */
+    body {
+        overflow-x: hidden;
+    }
+
+    .contact-wrapper,
+    .exp-container,
+    .about-lower {
+        flex-direction: column !important; /* Susun ke bawah, bukan ke samping */
+        gap: 24px !important;
+    }
+
+    .about-highlights,
+    .projects-grid,
+    .skills-grid,
+    .cert-grid {
+        grid-template-columns: 1fr !important; /* Buat jadi 1 kolom saja di HP */
+    }
+
+    /* 2. NAVBAR & HAMBURGER MENU (MIRIP CHATGPT/GEMINI) */
+    .main-nav {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .hamburger-btn {
+        display: block; /* Tampilkan tombol hamburger di HP */
+    }
+
+    /* Tampilan drawer menu saat tertutup */
+    .nav-menu {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 220px;
+        background: #18181b; /* Background gelap khas tema kamu */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        
+        /* Efek transisi halus (tersembunyi secara default) */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Saat menu terbuka (diklik) */
+    .nav-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu .lang-switcher {
+        margin-top: 8px;
+        justify-content: flex-start;
+    }
+
+    /* 3. DETAIL PAGE ADJUSTMENTS */
+    .project-detail-page {
+        padding: 80px 20px 40px 20px !important;
+    }
+
+    .detail-header h1 {
+        font-size: 24px !important;
+    }
+
+    .back-link-top {
+        top: 16px;
+        left: 16px;
+    }
 }
