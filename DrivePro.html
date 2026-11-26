@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivePro — Project Detail</title>
+
+    <!-- Global & Component Styles -->
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <!-- Style Khusus Detail Page -->
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND GLOW -->
+    <div class="about-glow about-glow-one"></div>
+    <div class="about-glow about-glow-two"></div>
+
+    <!-- TOMBOL BACK TO ALL PROJECTS (POJOK KIRI ATAS) -->
+    <a href="projects.html" class="back-link-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span data-en="Back to All Projects" data-id="Kembali ke Semua Proyek">Back to All Projects</span>
+    </a>
+
+    <!-- MAIN CONTENT -->
+    <main class="project-detail-page">
+
+        <!-- HEADER DETAIL -->
+        <header class="detail-header">
+            <div class="detail-tags">
+                <span class="badge" data-en="Web & Apps" data-id="Web & Aplikasi">Web & Apps</span>
+            </div>
+
+            <h1 data-en="DrivePro — Vehicle Service & Queue Management System"
+                data-id="DrivePro — Sistem Manajemen Servis & Antrean Kendaraan">
+                DrivePro — Vehicle Service & Queue Management System
+            </h1>
+
+            <div class="detail-tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </header>
+
+        <div class="detail-action-btns">
+            <!-- Sesuaikan href di bawah ini dengan link Vercel DrivePro milikmu -->
+            <a href="https://drivepro-eta.vercel.app/" target="_blank" class="action-btn primary">
+                🔗 <span data-en="Live Web Application" data-id="Aplikasi Web Live">Live Web Application</span>
+            </a>
+        </div>  
+
+        <!-- BANNER / COVER UTAMA PROJECT (Sesuaikan nama file gambar cover DrivePro milikmu) -->
+        <div class="detail-hero-img">
+            <img src="LogoDP.png" alt="DrivePro Vehicle Service & Queue Management System Cover">
+        </div>
+
+        <!-- ARTICLE / NASKAH PENJELASAN -->
+        <article class="detail-article">
+
+            <section class="detail-section">
+                <h2 data-en="Problem Identified" data-id="Permasalahan yang Diidentifikasi">Problem Identified</h2>
+                <p data-en="Conventional vehicle workshop operations often suffer from manual queue handling and disconnected service tracking, creating operational bottlenecks for both customers and workshop staff:"
+                   data-id="Operasional bengkel kendaraan konvensional sering terkendala oleh pengelolaan antrean manual dan pemantauan servis yang tidak terhubung, sehingga menimbulkan hambatan bagi pelanggan maupun staf bengkel:">
+                    Conventional vehicle workshop operations often suffer from manual queue handling and disconnected service tracking, creating operational bottlenecks for both customers and workshop staff:
+                </p>
+                <ul style="color: #b7b7b7; font-size: 16px; line-height: 1.85; padding-left: 20px; margin-top: 10px;">
+                    <li data-en="Uncertain Waiting & Service Duration: Customers lacked real-time visibility into their queue position, active bay assignment, and estimated completion time."
+                        data-id="Ketidakpastian Waktu Tunggu & Durasi Servis: Pelanggan tidak memiliki visibilitas langsung mengenai posisi antrean, penempatan bay aktif, maupun estimasi waktu selesai pengerjaan.">
+                        <strong>Uncertain Waiting & Service Duration:</strong> Customers lacked real-time visibility into their queue position, active bay assignment, and estimated completion time.
+                    </li>
+                    <li data-en="Unstructured Bay & Queue Allocation: Manual coordination between front-desk intake and workshop bays led to idle bays or delayed vehicle call-ups."
+                        data-id="Alokasi Bay & Antrean yang Tidak Terstruktur: Koordinasi manual antara penerimaan servis dan bay bengkel sering menyebabkan bay menganggur atau keterlambatan pemanggilan kendaraan.">
+                        <strong>Unstructured Bay & Queue Allocation:</strong> Manual coordination between front-desk intake and workshop bays led to idle bays or delayed vehicle call-ups.
+                    </li>
+                    <li data-en="Skill-Mismatch Risks for Hybrid & EV Units: Assigning mechanics without filtering certifications for Gasoline, Hybrid, and Electric Vehicles risked operational delays and safety issues."
+                        data-id="Risiko Ketidaksesuaian Keahlian untuk Unit Hybrid & EV: Penugasan mekanik tanpa penyaringan sertifikasi untuk mesin Bensin, Hybrid, dan Listrik berisiko menghambat pengerjaan dan keselamatan kerja.">
+                        <strong>Skill-Mismatch Risks for Hybrid & EV Units:</strong> Assigning mechanics without filtering certifications for Gasoline, Hybrid, and Electric Vehicles risked operational delays and safety issues.
+                    </li>
+                    <li data-en="Manual Cost & Sparepart Recap: On-the-spot service adjustments and sparepart replacements were prone to calculation errors before final billing."
+                        data-id="Rekapitulasi Biaya & Suku Cadang Manual: Penambahan layanan atau penggantian sparepart di tengah pengerjaan rentan mengalami kesalahan hitung sebelum proses pembayaran akhir.">
+                        <strong>Manual Cost & Sparepart Recap:</strong> On-the-spot service adjustments and sparepart replacements were prone to calculation errors before final billing.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="System Solution & Project Scope" data-id="Solusi Sistem & Cakupan Proyek">System Solution & Project Scope</h2>
+                <p data-en="To streamline end-to-end workshop operations, a web-based service and queue management system was developed with four core functional modules:"
+                   data-id="Untuk menyederhanakan operasional bengkel secara menyeluruh, sistem manajemen servis dan antrean berbasis web dikembangkan dengan empat modul fungsional utama:">
+                    To streamline end-to-end workshop operations, a web-based service and queue management system was developed with four core functional modules:
+                </p>
+                <ul style="color: #b7b7b7; font-size: 16px; line-height: 1.85; padding-left: 20px; margin-top: 10px;">
+                    <li data-en="Service Booking & Walk-In Intake: Supports online reservations as well as rapid front-desk ticket generation for both registered members and walk-in guests, complete with engine-specific service catalogs and automated cost & duration estimation."
+                        data-id="Pemesanan Servis & Penerimaan Walk-In: Mendukung reservasi online maupun pembuatan tiket antrean cepat di meja penerimaan untuk pelanggan member maupun umum, lengkap dengan katalog layanan per tipe mesin serta kalkulasi estimasi biaya dan durasi otomatis.">
+                        <strong>Service Booking & Walk-In Intake:</strong> Supports online reservations as well as rapid front-desk ticket generation for both registered members and walk-in guests, complete with engine-specific service catalogs and automated cost & duration estimation.
+                    </li>
+                    <li data-en="Real-Time Queue & Bay Monitoring: Provides a live branch-wide bay status board (Empty, Called, In-Progress) alongside a dedicated active-bay workspace for staff to manage job progression and dynamically adjust remaining service time."
+                        data-id="Pemantauan Antrean & Bay Real-Time: Menyediakan papan status seluruh bay cabang secara langsung (Kosong, Dipanggil, Dikerjakan) beserta ruang kerja bay aktif bagi staf untuk mengelola progres servis dan menyesuaikan sisa waktu pengerjaan secara dinamis.">
+                        <strong>Real-Time Queue & Bay Monitoring:</strong> Provides a live branch-wide bay status board (Empty, Called, In-Progress) alongside a dedicated active-bay workspace for staff to manage job progression and dynamically adjust remaining service time.
+                    </li>
+                    <li data-en="Skill-Based Mechanic Allocation: Automatically filters available mechanics based on vehicle engine type (Gasoline vs. certified Hybrid/EV specialists) and real-time bay availability when assigning waiting tickets to empty bays."
+                        data-id="Alokasi Mekanik Berbasis Keahlian: Menyaring daftar mekanik yang tersedia secara otomatis berdasarkan tipe mesin kendaraan (spesialis Bensin vs. bersertifikat Hybrid/EV) serta ketersediaan bay real-time saat menempatkan tiket antrean ke bay kosong.">
+                        <strong>Skill-Based Mechanic Allocation:</strong> Automatically filters available mechanics based on vehicle engine type (Gasoline vs. certified Hybrid/EV specialists) and real-time bay availability when assigning waiting tickets to empty bays.
+                    </li>
+                    <li data-en="Dynamic Service & Sparepart Billing Recap: Enables staff to update service checklists, log sparepart replacements with installation fees, and archive completed jobs into a searchable service history log."
+                        data-id="Rekapitulasi Layanan & Suku Cadang Dinamis: Memungkinkan staf memperbarui daftar layanan servis, mencatat penggantian sparepart beserta biaya pemasangan, serta mengarsipkan pekerjaan selesai ke dalam riwayat servis yang mudah dicari.">
+                        <strong>Dynamic Service & Sparepart Billing Recap:</strong> Enables staff to update service checklists, log sparepart replacements with installation fees, and archive completed jobs into a searchable service history log.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-section">
+                <h2 data-en="Project Deliverables & Business Impact (Output)" data-id="Hasil Proyek & Dampak Bisnis (Output)">Project Deliverables & Business Impact (Output)</h2>
+                <p data-en="The implementation of DrivePro established a structured, transparent, and responsive workflow across customer and workshop touchpoints:"
+                   data-id="Implementasi DrivePro menciptakan alur kerja yang terstruktur, transparan, dan responsif di seluruh titik layanan pelanggan maupun operasional bengkel:">
+                    The implementation of DrivePro established a structured, transparent, and responsive workflow across customer and workshop touchpoints:
+                </p>
+                <ul style="color: #b7b7b7; font-size: 16px; line-height: 1.85; padding-left: 20px; margin-top: 10px;">
+                    <li data-en="Transparent Customer Queue Experience: Customers can track queue tickets, bay assignments, and live status updates without needing to repeatedly inquire at the service counter."
+                        data-id="Pengalaman Antrean Pelanggan yang Transparan: Pelanggan dapat memantau nomor antrean, penempatan bay, dan pembaruan status secara langsung tanpa perlu berulang kali bertanya ke meja layanan.">
+                        <strong>Transparent Customer Queue Experience:</strong> Customers can track queue tickets, bay assignments, and live status updates without needing to repeatedly inquire at the service counter.
+                    </li>
+                    <li data-en="Optimized Bay Utilization & Faster Turnaround: Clear visibility of empty bays and waiting queues accelerates vehicle call-ups and minimizes workshop idle time."
+                        data-id="Optimalisasi Penggunaan Bay & Waktu Penyelesaian Lebih Cepat: Visibilitas bay kosong dan daftar tunggu mempercepat pemanggilan kendaraan serta meminimalkan waktu tunggu di bengkel.">
+                        <strong>Optimized Bay Utilization & Faster Turnaround:</strong> Clear visibility of empty bays and waiting queues accelerates vehicle call-ups and minimizes workshop idle time.
+                    </li>
+                    <li data-en="Accurate Technician Routing: Skill-based filtering ensures high-voltage Hybrid and EV vehicles are strictly handled by certified specialists."
+                        data-id="Penugasan Teknisi yang Tepat Sasaran: Penyaringan berbasis keahlian memastikan kendaraan Hybrid dan listrik ditangani secara tepat oleh teknisi bersertifikat.">
+                        <strong>Accurate Technician Routing:</strong> Skill-based filtering ensures high-voltage Hybrid and EV vehicles are strictly handled by certified specialists.
+                    </li>
+                    <li data-en="Reliable Audit Trail & Cost Transparency: Every completed service records exact timestamps, assigned personnel, itemized services, and sparepart costs for accurate handoff to cashier checkout."
+                        data-id="Jejak Audit & Transparansi Biaya yang Akurat: Setiap servis yang selesai mencatat waktu pengerjaan, petugas yang menangani, rincian layanan, serta biaya sparepart secara akurat sebelum proses pembayaran kasir.">
+                        <strong>Reliable Audit Trail & Cost Transparency:</strong> Every completed service records exact timestamps, assigned personnel, itemized services, and sparepart costs for accurate handoff to cashier checkout.
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Script sinkronisasi bahasa otomatis -->
+    <script src="lang-sync.js"></script>
+
+</body>
+
+</html>
